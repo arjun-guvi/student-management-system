@@ -1,0 +1,80 @@
+Task:  Create a Student Performance Tracking System using object-oriented programming principles in Python. The system should include functionalities for managing users, students, and their grades, as well as generating performance reports. You are required to implement the following classes:
+
+User:
+
+Attributes:
+username: The username of the user.
+password: The password of the user.
+students: A list to store the students managed by the user.
+Methods:
+__init__(self, username, password): Constructor to initialize the username, password, and students list.
+set_password(self, password): Method to update the password.
+check_password(self, password): Method to check if the provided password matches the user's password.
+Student:
+
+Attributes:
+student_id: The unique identifier for the student.
+name: The name of the student.
+grades: A dictionary to store the grades of the student.
+Methods:
+__init__(self, student_id, name): Constructor to initialize the student with an ID and name.
+add_grade(self, course, grade): Method to add a grade for a course.
+update_grade(self, course, grade): Method to update the grade for a course.
+delete_grade(self, course): Method to delete the grade for a course.
+get_average_grade(self): Method to calculate and return the average grade.
+PerformanceReport:
+
+Attributes:
+student: The Student object for which the report is generated.
+Methods:
+__init__(self, student): Constructor to initialize the report with a student.
+generate_report(self): Method to generate and return a performance report as a string.
+StudentPerformanceSystem:
+
+Attributes:
+users: A list to store all users.
+students: A list to store all students.
+Methods:
+__init__(self): Constructor to initialize the system with empty users and students lists.
+sign_up(self, username, password): Method to create a new user and add them to the users list.
+login(self, username, password): Method to authenticate a user.
+add_student(self, user, student_id, name): Method to add a student for a specific user.
+update_student(self, user, student_id, name): Method to update a student's information for a specific user.
+delete_student(self, user, student_id): Method to delete a student for a specific user.
+
+_______________________________________________________________________________________
+import pytest
+from app import User, Student, PerformanceReport, StudentPerformanceSystem 
+
+def test_user_sign_up():
+    ...
+
+def test_user_login():
+    ...
+
+def test_add_student():
+    ...
+
+def test_update_student():
+    ...
+
+def test_delete_student():
+    ...
+
+def test_record_grade():
+    ...
+
+def test_update_grade():
+    ...
+
+def test_delete_grade():
+    ...
+
+def test_average_grade():
+    ...
+
+def test_performance_report():
+    ...
+
+if __name__ == "__main__":
+    pytest.main()
