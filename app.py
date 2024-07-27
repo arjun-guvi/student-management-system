@@ -63,7 +63,7 @@ class StudentPerformanceSystem:
             student = Student(student_id, name)
             user.students.append(student)
             self.students.append(student)
-            return student
+            return ""
         return None
 
     def update_student(self, user, student_id, name):
