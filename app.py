@@ -70,7 +70,7 @@ class StudentPerformanceSystem:
         if user in self.users:
             for student in self.students:
                 if student.student_id == student_id:
-                    student.name = name12
+                    student.name = name
                     return student
         return None
 
