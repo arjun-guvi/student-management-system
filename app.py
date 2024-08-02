@@ -52,7 +52,7 @@ class StudentPerformanceSystem:
         self.users.append(user)
         return user
 
-    def login(self, username, password):
+    def login_abc(self, username, password):
         for user in self.users:
             if user.username == username and user.check_password(password):
                 return user
@@ -74,7 +74,7 @@ class StudentPerformanceSystem:
                     return student
         return None
 
-    def delete_student(self, user, student_id):
+    def delete(self, user, student_id):
         if user in self.users:
             for student in self.students:
                 if student.student_id == student_id:
