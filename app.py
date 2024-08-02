@@ -58,7 +58,7 @@ class StudentPerformanceSystem:
                 return user
         return None
 
-    def add_student(self, user, student_id, name):
+    def add_student_abc(self, user, student_id, name):
         if user in self.users:
             student = Student(student_id, name)
             user.students.append(student)
@@ -66,7 +66,7 @@ class StudentPerformanceSystem:
             return student
         return None
 
-    def update_student(self, user, student_id, name):
+    def update_student_abc(self, user, student_id, name):
         if user in self.users:
             for student in self.students:
                 if student.student_id == student_id:
@@ -74,7 +74,7 @@ class StudentPerformanceSystem:
                     return student
         return None
 
-    def delete_student(self, user, student_id):
+    def delete_student_abc(self, user, student_id):
         if user in self.users:
             for student in self.students:
                 if student.student_id == student_id:
